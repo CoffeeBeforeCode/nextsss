@@ -1,33 +1,18 @@
-import { NextSeo } from 'next-seo'
-import clsx from 'clsx'
-import Layout from '../components/Layout'
-import Image from '../components/Image'
-import styles from '../styles/Home.module.scss'
-import logo from '../public/logo@2x.png'
+import Head from 'next/head';
 
-const Home: React.FC = () => {
+export default function Home() {
   return (
-    <Layout>
-      <NextSeo
-        title="NextSSS"
-        description="Next.js Static Site Starter"
-        openGraph={{
-          type: 'website',
-        }}
-      />
-      <div
-        className={clsx(
-          'grid grow shrink-0 place-content-center place-items-center',
-          styles.hero
-        )}
-      >
-        <figure className="max-w-3xl">
-          <Image src={logo} alt="NextSSS Logo" />
-        </figure>
-        <h1 className="mt-10 font-extrabold text-center">Hello, World!</h1>
-      </div>
-    </Layout>
-  )
-}
+    <>
+      <Head>
+        <title>Phillip Collins | Global Leadership Coach & Fractional CEO</title>
+        <meta name="description" content="Coaching | Emotional Intelligence | Fractional CEO | Digital Strategy" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
 
-export default Home
+      <main>
+        <h1>Welcome to Phillip Collins</h1>
+        <p>Fractional CEO · Executive Coach · Technologist</p>
+      </main>
+    </>
+  );
+}
