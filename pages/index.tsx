@@ -1,6 +1,34 @@
 import Head from 'next/head';
 
 export default function Home() {
+  // Responsive styles as JavaScript objects
+  const twoColumnStyle = {
+    display: 'grid',
+    gridTemplateColumns: '1fr 2fr',
+    gap: '40px',
+    marginBottom: '60px',
+    alignItems: 'start'
+  };
+
+  const testimonialGridStyle = {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr',
+    gap: '40px'
+  };
+
+  const logoGridStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+    gap: '30px',
+    alignItems: 'center'
+  };
+
+  const coachingCardsStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '30px'
+  };
+
   return (
     <>
       <Head>
@@ -8,82 +36,14 @@ export default function Home() {
         <meta name="description" content="Coaching | Emotional Intelligence | Fractional CEO | Digital Strategy" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&family=Yesteryear:wght@400&display=swap" rel="stylesheet" />
-        <style jsx>{`
-          .two-column {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 40px;
-            margin-bottom: 60px;
-            align-items: start;
-          }
-          
-          .testimonial-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-          }
-          
-          .logo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
-            align-items: center;
-          }
-          
-          .coaching-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-          }
-          
-          @media (max-width: 768px) {
-            .two-column {
-              grid-template-columns: 1fr;
-              gap: 30px;
-            }
-            
-            .testimonial-grid {
-              grid-template-columns: 1fr;
-              gap: 30px;
-            }
-            
-            .logo-grid {
-              grid-template-columns: repeat(2, 1fr);
-              gap: 20px;
-            }
-            
-            .coaching-cards {
-              grid-template-columns: 1fr;
-              gap: 20px;
-            }
-            
-            h1 {
-              font-size: 2rem !important;
-            }
-            
-            .main-hero {
-              font-size: 2.5rem !important;
-            }
-          }
-          
-          @media (max-width: 480px) {
-            .main-hero {
-              font-size: 2rem !important;
-            }
-            
-            .logo-grid {
-              grid-template-columns: 1fr;
-            }
-          }
-        `}</style>
       </Head>
 
       <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
         {/* Hero Section */}
         <section style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <h1 className="main-hero" style={{ 
+          <h1 style={{ 
             fontFamily: 'Waiting for the Sunrise, cursive', 
-            fontSize: '3rem', 
+            fontSize: 'clamp(2rem, 5vw, 3rem)', 
             marginBottom: '20px',
             color: '#333'
           }}>
@@ -92,11 +52,18 @@ export default function Home() {
         </section>
 
         {/* Two Column Introduction */}
-        <section className="two-column">
+        <section style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '40px',
+          marginBottom: '60px',
+          alignItems: 'start'
+        }}>
           {/* Column 1 - Portrait */}
           <div style={{ textAlign: 'center' }}>
             <div style={{
-              width: '250px',
+              width: '100%',
+              maxWidth: '250px',
               height: '300px',
               backgroundColor: '#f0f0f0',
               border: '2px dashed #ccc',
@@ -104,8 +71,7 @@ export default function Home() {
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto',
-              borderRadius: '10px',
-              maxWidth: '100%'
+              borderRadius: '10px'
             }}>
               <span style={{ color: '#666' }}>Portrait Photo</span>
             </div>
@@ -191,7 +157,7 @@ export default function Home() {
           borderRadius: '10px',
           marginBottom: '60px'
         }}>
-          <h2 style={{ fontSize: '1.8rem', marginBottom: '20px', color: '#333' }}>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 1.8rem)', marginBottom: '20px', color: '#333' }}>
             Curious about your leadership equation?
           </h2>
           <button style={{
@@ -212,7 +178,7 @@ export default function Home() {
         <section style={{ marginBottom: '60px' }}>
           <h1 style={{
             fontFamily: 'Waiting for the Sunrise, cursive',
-            fontSize: '2.5rem',
+            fontSize: 'clamp(2rem, 5vw, 2.5rem)',
             textAlign: 'center',
             marginBottom: '40px',
             color: '#333'
@@ -220,7 +186,11 @@ export default function Home() {
             Why People need a Leadership Coach
           </h1>
 
-          <div className="coaching-cards">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '30px'
+          }}>
             {/* Card 1 */}
             <div style={{
               backgroundColor: '#7E2D40',
@@ -283,7 +253,7 @@ export default function Home() {
         <section style={{ marginBottom: '60px' }}>
           <h1 style={{
             fontFamily: 'Waiting for the Sunrise, cursive',
-            fontSize: '2.5rem',
+            fontSize: 'clamp(2rem, 5vw, 2.5rem)',
             textAlign: 'center',
             marginBottom: '40px',
             color: '#333'
@@ -291,7 +261,12 @@ export default function Home() {
             Some of the many companies I&apos;ve worked with...
           </h1>
 
-          <div className="logo-grid">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+            gap: '20px',
+            alignItems: 'center'
+          }}>
             {/* Logo placeholders */}
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} style={{
@@ -317,7 +292,7 @@ export default function Home() {
           borderRadius: '10px',
           marginBottom: '60px'
         }}>
-          <h2 style={{ fontSize: '1.8rem', marginBottom: '20px', color: '#333' }}>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 1.8rem)', marginBottom: '20px', color: '#333' }}>
             Ready to enhance your leadership effectiveness?
           </h2>
           <button style={{
@@ -338,7 +313,7 @@ export default function Home() {
         <section style={{ marginBottom: '60px' }}>
           <h1 style={{
             fontFamily: 'Waiting for the Sunrise, cursive',
-            fontSize: '2.5rem',
+            fontSize: 'clamp(2rem, 5vw, 2.5rem)',
             textAlign: 'center',
             marginBottom: '40px',
             color: '#333'
@@ -346,7 +321,11 @@ export default function Home() {
             Leadership Transformation in Action
           </h1>
 
-          <div className="testimonial-grid">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '40px'
+          }}>
             {/* Testimonial 1 */}
             <div style={{
               backgroundColor: '#1A365D',
@@ -397,13 +376,13 @@ export default function Home() {
         <section style={{ textAlign: 'center', marginBottom: '60px' }}>
           <h2 style={{
             fontFamily: 'Waiting for the Sunrise, cursive',
-            fontSize: '3rem',
+            fontSize: 'clamp(2.5rem, 6vw, 3rem)',
             color: '#333',
             marginBottom: '20px'
           }}>
             The Leadership Equation
           </h2>
-          <div style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#7E2D40' }}>
+          <div style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: 'bold', color: '#7E2D40' }}>
             PE = PO - I
           </div>
         </section>
