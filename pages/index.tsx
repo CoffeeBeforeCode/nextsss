@@ -19,7 +19,7 @@ export default function Home() {
             marginBottom: '20px',
             color: '#333'
           }}>
-            Hello! I'm Phillip Collins
+            Hello! I&apos;m Phillip Collins
           </h1>
         </section>
 
@@ -73,7 +73,7 @@ export default function Home() {
               <div style={{ marginTop: '20px' }}>
                 <strong>Primary Industries:</strong>
                 <p style={{ marginTop: '10px', marginBottom: '10px' }}>
-                  I've worked with executives across major industries including:
+                  I&apos;ve worked with executives across major industries including:
                 </p>
                 <ul style={{ listStyleType: 'disc', marginLeft: '20px', paddingLeft: '20px' }}>
                   <li>Technology & Digital Innovation</li>
@@ -86,7 +86,7 @@ export default function Home() {
             </div>
 
             <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '20px' }}>
-              Within these broad industries, I've partnered with leaders across numerous sectors - too many to list here, ranging from early-stage startups to established multinationals.
+              Within these broad industries, I&apos;ve partnered with leaders across numerous sectors - too many to list here, ranging from early-stage startups to established multinationals.
             </p>
 
             <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '30px' }}>
@@ -153,7 +153,7 @@ export default function Home() {
             marginBottom: '40px',
             color: '#333'
           }}>
-            Why People need a <strong>Leadership Coach</strong>
+            Why People need a &lt;strong&gt;Leadership Coach&lt;/strong&gt;
           </h1>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
@@ -167,7 +167,7 @@ export default function Home() {
             }}>
               <h4 style={{ fontSize: '1.3rem', marginBottom: '15px' }}>The Leadership Equation</h4>
               <p style={{ lineHeight: '1.6' }}>
-                I help executives apply the PE=PO-I equation in their specific context. When we reduce interference—all the "stuff" that gets in your way—your performance naturally rises to meet your potential. Our coaching partnership creates space for you to identify what's limiting your effectiveness and develop strategies that work for you.
+                I help executives apply the PE=PO-I equation in their specific context. When we reduce interference—all the &quot;stuff&quot; that gets in your way—your performance naturally rises to meet your potential. Our coaching partnership creates space for you to identify what&apos;s limiting your effectiveness and develop strategies that work for you.
               </p>
             </div>
 
@@ -209,7 +209,7 @@ export default function Home() {
             }}>
               <h4 style={{ fontSize: '1.3rem', marginBottom: '15px' }}>Leadership in Practice</h4>
               <p style={{ lineHeight: '1.6' }}>
-                I believe leadership is a practice—much like yoga or meditation—that one engages with throughout life rather than a destination or achievement. Through our partnership, you'll develop a sustainable approach to leadership development that integrates daily awareness with continuous growth, creating impact across all five domains of your life.
+                I believe leadership is a practice—much like yoga or meditation—that one engages with throughout life rather than a destination or achievement. Through our partnership, you&apos;ll develop a sustainable approach to leadership development that integrates daily awareness with continuous growth, creating impact across all five domains of your life.
               </p>
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function Home() {
             marginBottom: '40px',
             color: '#333'
           }}>
-            Some of the many companies <strong>I've worked with...</strong>
+            Some of the many companies &lt;strong&gt;I&apos;ve worked with...&lt;/strong&gt;
           </h1>
 
           <div style={{
@@ -283,7 +283,7 @@ export default function Home() {
             marginBottom: '40px',
             color: '#333'
           }}>
-            Leadership <strong>Transformation in Action</strong>
+            Leadership &lt;strong&gt;Transformation in Action&lt;/strong&gt;
           </h1>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px' }}>
@@ -300,7 +300,7 @@ export default function Home() {
                 fontStyle: 'italic',
                 marginBottom: '20px'
               }}>
-                "My team and I have never had such honest conversations with each other, until I started working with Phillip. His ability to create a safe space where challenging topics can be discussed has transformed how we operate as a leadership team."
+                &quot;My team and I have never had such honest conversations with each other, until I started working with Phillip. His ability to create a safe space where challenging topics can be discussed has transformed how we operate as a leadership team.&quot;
               </p>
               <div style={{ fontSize: '0.9rem', color: '#666' }}>
                 <strong>Country Head</strong><br />
@@ -321,7 +321,7 @@ export default function Home() {
                 fontStyle: 'italic',
                 marginBottom: '20px'
               }}>
-                "I have been surprised at how comfortable it has felt being stretched through this coaching process. The stretch has become an additional approach rather than replacing who I am; expanding my capabilities while preserving my authentic self."
+                &quot;I have been surprised at how comfortable it has felt being stretched through this coaching process. The stretch has become an additional approach rather than replacing who I am; expanding my capabilities while preserving my authentic self.&quot;
               </p>
               <div style={{ fontSize: '0.9rem', color: '#666' }}>
                 <strong>Chief Financial Officer</strong><br />
