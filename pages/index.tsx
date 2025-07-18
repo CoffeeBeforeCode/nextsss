@@ -1,34 +1,6 @@
 import Head from 'next/head';
 
 export default function Home() {
-  // Responsive styles as JavaScript objects
-  const twoColumnStyle = {
-    display: 'grid',
-    gridTemplateColumns: '1fr 2fr',
-    gap: '40px',
-    marginBottom: '60px',
-    alignItems: 'start'
-  };
-
-  const testimonialGridStyle = {
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
-    gap: '40px'
-  };
-
-  const logoGridStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-    gap: '30px',
-    alignItems: 'center'
-  };
-
-  const coachingCardsStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-    gap: '30px'
-  };
-
   return (
     <>
       <Head>
