@@ -8,12 +8,80 @@ export default function Home() {
         <meta name="description" content="Coaching | Emotional Intelligence | Fractional CEO | Digital Strategy" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&family=Yesteryear:wght@400&display=swap" rel="stylesheet" />
+        <style jsx>{`
+          .two-column {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: start;
+          }
+          
+          .testimonial-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+          }
+          
+          .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            align-items: center;
+          }
+          
+          .coaching-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+          }
+          
+          @media (max-width: 768px) {
+            .two-column {
+              grid-template-columns: 1fr;
+              gap: 30px;
+            }
+            
+            .testimonial-grid {
+              grid-template-columns: 1fr;
+              gap: 30px;
+            }
+            
+            .logo-grid {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 20px;
+            }
+            
+            .coaching-cards {
+              grid-template-columns: 1fr;
+              gap: 20px;
+            }
+            
+            h1 {
+              font-size: 2rem !important;
+            }
+            
+            .main-hero {
+              font-size: 2.5rem !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .main-hero {
+              font-size: 2rem !important;
+            }
+            
+            .logo-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        `}</style>
       </Head>
 
       <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
         {/* Hero Section */}
         <section style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <h1 style={{ 
+          <h1 className="main-hero" style={{ 
             fontFamily: 'Waiting for the Sunrise, cursive', 
             fontSize: '3rem', 
             marginBottom: '20px',
@@ -24,13 +92,7 @@ export default function Home() {
         </section>
 
         {/* Two Column Introduction */}
-        <section style={{ 
-          display: 'grid', 
-          gridTemplateColumns: '1fr 2fr', 
-          gap: '40px', 
-          marginBottom: '60px',
-          alignItems: 'start'
-        }}>
+        <section className="two-column">
           {/* Column 1 - Portrait */}
           <div style={{ textAlign: 'center' }}>
             <div style={{
@@ -42,7 +104,8 @@ export default function Home() {
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto',
-              borderRadius: '10px'
+              borderRadius: '10px',
+              maxWidth: '100%'
             }}>
               <span style={{ color: '#666' }}>Portrait Photo</span>
             </div>
@@ -106,7 +169,7 @@ export default function Home() {
             </div>
 
             {/* Social Icons Placeholder */}
-            <div style={{ display: 'flex', gap: '15px' }}>
+            <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
               <div style={{ width: '40px', height: '40px', backgroundColor: '#0077B5', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white' }}>
                 <span style={{ fontSize: '12px' }}>LI</span>
               </div>
@@ -123,7 +186,7 @@ export default function Home() {
         {/* CTA Section */}
         <section style={{
           backgroundColor: '#f8f9fa',
-          padding: '40px',
+          padding: '40px 20px',
           textAlign: 'center',
           borderRadius: '10px',
           marginBottom: '60px'
@@ -132,13 +195,14 @@ export default function Home() {
             Curious about your leadership equation?
           </h2>
           <button style={{
-            backgroundColor: '#7E2D40',
+            backgroundColor: '#F96E1E',
             color: 'white',
             padding: '15px 30px',
             border: 'none',
             borderRadius: '5px',
             fontSize: '1.1rem',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            transition: 'background-color 0.3s ease'
           }}>
             Let&apos;s explore together
           </button>
@@ -156,7 +220,7 @@ export default function Home() {
             Why People need a Leadership Coach
           </h1>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
+          <div className="coaching-cards">
             {/* Card 1 */}
             <div style={{
               backgroundColor: '#7E2D40',
@@ -227,12 +291,7 @@ export default function Home() {
             Some of the many companies I&apos;ve worked with...
           </h1>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-            gap: '30px',
-            alignItems: 'center'
-          }}>
+          <div className="logo-grid">
             {/* Logo placeholders */}
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} style={{
@@ -253,7 +312,7 @@ export default function Home() {
         {/* Second CTA */}
         <section style={{
           backgroundColor: '#f8f9fa',
-          padding: '40px',
+          padding: '40px 20px',
           textAlign: 'center',
           borderRadius: '10px',
           marginBottom: '60px'
@@ -262,13 +321,14 @@ export default function Home() {
             Ready to enhance your leadership effectiveness?
           </h2>
           <button style={{
-            backgroundColor: '#7E2D40',
+            backgroundColor: '#F96E1E',
             color: 'white',
             padding: '15px 30px',
             border: 'none',
             borderRadius: '5px',
             fontSize: '1.1rem',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            transition: 'background-color 0.3s ease'
           }}>
             Schedule an exploratory conversation
           </button>
@@ -286,13 +346,14 @@ export default function Home() {
             Leadership Transformation in Action
           </h1>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px' }}>
+          <div className="testimonial-grid">
             {/* Testimonial 1 */}
             <div style={{
-              backgroundColor: '#f8f9fa',
+              backgroundColor: '#1A365D',
+              color: 'white',
               padding: '30px',
               borderRadius: '10px',
-              borderLeft: '5px solid #7E2D40'
+              borderLeft: '5px solid #F96E1E'
             }}>
               <p style={{ 
                 fontSize: '1.1rem', 
@@ -302,7 +363,7 @@ export default function Home() {
               }}>
                 &quot;My team and I have never had such honest conversations with each other, until I started working with Phillip. His ability to create a safe space where challenging topics can be discussed has transformed how we operate as a leadership team.&quot;
               </p>
-              <div style={{ fontSize: '0.9rem', color: '#666' }}>
+              <div style={{ fontSize: '0.9rem', color: '#F96E1E', fontWeight: 'bold' }}>
                 <strong>Country Head</strong><br />
                 Telecommunications
               </div>
@@ -310,10 +371,11 @@ export default function Home() {
 
             {/* Testimonial 2 */}
             <div style={{
-              backgroundColor: '#f8f9fa',
+              backgroundColor: '#1A365D',
+              color: 'white',
               padding: '30px',
               borderRadius: '10px',
-              borderLeft: '5px solid #7E2D40'
+              borderLeft: '5px solid #F96E1E'
             }}>
               <p style={{ 
                 fontSize: '1.1rem', 
@@ -323,7 +385,7 @@ export default function Home() {
               }}>
                 &quot;I have been surprised at how comfortable it has felt being stretched through this coaching process. The stretch has become an additional approach rather than replacing who I am; expanding my capabilities while preserving my authentic self.&quot;
               </p>
-              <div style={{ fontSize: '0.9rem', color: '#666' }}>
+              <div style={{ fontSize: '0.9rem', color: '#F96E1E', fontWeight: 'bold' }}>
                 <strong>Chief Financial Officer</strong><br />
                 Housing and Community Development
               </div>
