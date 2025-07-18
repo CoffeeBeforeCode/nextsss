@@ -140,7 +140,7 @@ export default function Home() {
             fontSize: '1.1rem',
             cursor: 'pointer'
           }}>
-            Let's explore together
+            Let&apos;s explore together
           </button>
         </section>
 
@@ -153,7 +153,7 @@ export default function Home() {
             marginBottom: '40px',
             color: '#333'
           }}>
-            Why People need a &lt;strong&gt;Leadership Coach&lt;/strong&gt;
+            Why People need a Leadership Coach
           </h1>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
@@ -224,7 +224,7 @@ export default function Home() {
             marginBottom: '40px',
             color: '#333'
           }}>
-            Some of the many companies &lt;strong&gt;I&apos;ve worked with...&lt;/strong&gt;
+            Some of the many companies I&apos;ve worked with...
           </h1>
 
           <div style={{
@@ -283,7 +283,7 @@ export default function Home() {
             marginBottom: '40px',
             color: '#333'
           }}>
-            Leadership &lt;strong&gt;Transformation in Action&lt;/strong&gt;
+            Leadership Transformation in Action
           </h1>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px' }}>
