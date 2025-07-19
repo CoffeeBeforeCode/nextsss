@@ -8,6 +8,28 @@ export default function Home() {
         <meta name="description" content="Coaching | Emotional Intelligence | Fractional CEO | Digital Strategy" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&family=Yesteryear:wght@400&display=swap" rel="stylesheet" />
+        <style>{`
+          .coaching-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+          }
+          
+          /* Portrait desktop: Force 2x2 layout */
+          @media (min-width: 769px) and (max-width: 1024px) {
+            .coaching-grid {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+          
+          /* Mobile: Stack vertically */
+          @media (max-width: 768px) {
+            .coaching-grid {
+              grid-template-columns: 1fr;
+              gap: 20px;
+            }
+          }
+        `}</style>
       </Head>
 
       <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
@@ -123,13 +145,14 @@ export default function Home() {
 
         {/* CTA Section */}
         <section style={{
-          backgroundColor: '#f8f9fa',
+          backgroundColor: '#1A365D',
+          color: 'white',
           padding: '40px 20px',
           textAlign: 'center',
           borderRadius: '10px',
           marginBottom: '60px'
         }}>
-          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 1.8rem)', marginBottom: '20px', color: '#333' }}>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 1.8rem)', marginBottom: '20px', color: 'white' }}>
             Curious about your leadership equation?
           </h2>
           <button style={{
@@ -158,11 +181,7 @@ export default function Home() {
             Why People need a Leadership Coach
           </h1>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '30px'
-          }}>
+          <div className="coaching-grid">
             {/* Card 1 */}
             <div style={{
               backgroundColor: '#7E2D40',
@@ -258,13 +277,14 @@ export default function Home() {
 
         {/* Second CTA */}
         <section style={{
-          backgroundColor: '#f8f9fa',
+          backgroundColor: '#1A365D',
+          color: 'white',
           padding: '40px 20px',
           textAlign: 'center',
           borderRadius: '10px',
           marginBottom: '60px'
         }}>
-          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 1.8rem)', marginBottom: '20px', color: '#333' }}>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 1.8rem)', marginBottom: '20px', color: 'white' }}>
             Ready to enhance your leadership effectiveness?
           </h2>
           <button style={{
