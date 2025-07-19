@@ -131,7 +131,7 @@ export default function Home() {
             {/* Signature */}
             <div style={{ marginBottom: '20px' }}>
               <h3 style={{
-                fontFamily: 'Yesteryear, cursive',
+                fontFamily: 'Waiting for the Sunrise, cursive',
                 fontSize: '2rem',
                 color: '#DD9933',
                 margin: '0'
