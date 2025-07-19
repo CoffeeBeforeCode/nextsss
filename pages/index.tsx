@@ -11,22 +11,34 @@ export default function Home() {
         <style>{`
           .coaching-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
           }
           
-          /* Portrait desktop: Force 2x2 layout */
-          @media (min-width: 769px) and (max-width: 1024px) {
-            .coaching-grid {
-              grid-template-columns: repeat(2, 1fr);
-            }
+          .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            align-items: center;
           }
           
-          /* Mobile: Stack vertically */
+          /* Mobile: Stack coaching cards vertically, keep logos 3x2 */
           @media (max-width: 768px) {
             .coaching-grid {
               grid-template-columns: 1fr;
               gap: 20px;
+            }
+            
+            .logo-grid {
+              grid-template-columns: repeat(3, 1fr);
+              gap: 15px;
+            }
+          }
+          
+          /* Very small screens: stack logos 2x3 */
+          @media (max-width: 480px) {
+            .logo-grid {
+              grid-template-columns: repeat(2, 1fr);
             }
           }
         `}</style>
@@ -252,12 +264,7 @@ export default function Home() {
             Some of the many companies I&apos;ve worked with...
           </h1>
 
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
-            gap: '20px',
-            alignItems: 'center'
-          }}>
+          <div className="logo-grid">
             {/* Logo placeholders */}
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} style={{
